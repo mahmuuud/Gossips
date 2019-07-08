@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if UserDefaults.standard.string(forKey: "phoneNumber") != nil{
+            let navController = UINavigationController(rootViewController: FriendsViewController())
+            window?.rootViewController = navController
+        }
+        application.statusBarStyle = .lightContent
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         return true
