@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1B306A22D34CCA003F1A99 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B306822D34CCA003F1A99 /* AuthViewController.swift */; };
+		0C1B306B22D34CCA003F1A99 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B306922D34CCA003F1A99 /* AuthViewController.xib */; };
+		0C1B306E22D3505C003F1A99 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B306C22D3505C003F1A99 /* FriendsViewController.swift */; };
+		0C1B306F22D3505C003F1A99 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B306D22D3505C003F1A99 /* FriendsViewController.xib */; };
 		0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */; };
 		0C7E0F1122CCBC7C00E275B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0F22CCBC7C00E275B2 /* Main.storyboard */; };
 		0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F1222CCBC7C00E275B2 /* Gossips.xcdatamodeld */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1B306822D34CCA003F1A99 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0C1B306922D34CCA003F1A99 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		0C1B306C22D3505C003F1A99 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		0C1B306D22D3505C003F1A99 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		0C43532A4AC963BA0C12C2B6 /* Pods-Gossips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gossips.release.xcconfig"; path = "Target Support Files/Pods-Gossips/Pods-Gossips.release.xcconfig"; sourceTree = "<group>"; };
 		0C7E0F0822CCBC7C00E275B2 /* Gossips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gossips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1B306622D34B9B003F1A99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C1B306722D34CA7003F1A99 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B306822D34CCA003F1A99 /* AuthViewController.swift */,
+				0C1B306922D34CCA003F1A99 /* AuthViewController.xib */,
+				0C1B306C22D3505C003F1A99 /* FriendsViewController.swift */,
+				0C1B306D22D3505C003F1A99 /* FriendsViewController.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		0C7E0EFF22CCBC7C00E275B2 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +89,8 @@
 		0C7E0F0A22CCBC7C00E275B2 /* Gossips */ = {
 			isa = PBXGroup;
 			children = (
+				0C1B306722D34CA7003F1A99 /* Scenes */,
+				0C1B306622D34B9B003F1A99 /* Model */,
 				0CBDFBF922CCDD5900CC1F4D /* GoogleService-Info.plist */,
 				0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */,
 				0C7E0F0F22CCBC7C00E275B2 /* Main.storyboard */,
@@ -103,7 +131,6 @@
 				0C7E0F0522CCBC7C00E275B2 /* Frameworks */,
 				0C7E0F0622CCBC7C00E275B2 /* Resources */,
 				24D7E6A55EF31A496EFC3F93 /* [CP] Embed Pods Frameworks */,
-				63BDC0268D7C0B76700E7DF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,8 @@
 			files = (
 				0C7E0F1922CCBC7D00E275B2 /* LaunchScreen.storyboard in Resources */,
 				0CBDFBFA22CCDD5900CC1F4D /* GoogleService-Info.plist in Resources */,
+				0C1B306F22D3505C003F1A99 /* FriendsViewController.xib in Resources */,
+				0C1B306B22D34CCA003F1A99 /* AuthViewController.xib in Resources */,
 				0C7E0F1622CCBC7D00E275B2 /* Assets.xcassets in Resources */,
 				0C7E0F1122CCBC7C00E275B2 /* Main.storyboard in Resources */,
 			);
@@ -177,23 +206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gossips/Pods-Gossips-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63BDC0268D7C0B76700E7DF0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gossips/Pods-Gossips-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gossips/Pods-Gossips-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gossips/Pods-Gossips-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBB2E289EC7CD4D2E27689C8 /* [CP] Check Pods Manifest.lock */ = {
@@ -225,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1B306E22D3505C003F1A99 /* FriendsViewController.swift in Sources */,
 				0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */,
+				0C1B306A22D34CCA003F1A99 /* AuthViewController.swift in Sources */,
 				0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

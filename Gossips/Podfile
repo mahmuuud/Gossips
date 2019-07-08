@@ -9,11 +9,9 @@ target 'Gossips' do
 pod 'Firebase/Core'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
-pod 'Firebase/Messaging'
 pod 'Firebase/Database'
 pod 'Firebase/RemoteConfig'
 pod 'Firebase/Storage'
-pod 'FirebaseUI'
 pod 'IQKeyboardManagerSwift'
 
 end
