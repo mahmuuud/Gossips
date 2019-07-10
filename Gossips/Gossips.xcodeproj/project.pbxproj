@@ -13,6 +13,15 @@
 		0C1B306F22D3505C003F1A99 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B306D22D3505C003F1A99 /* FriendsViewController.xib */; };
 		0C1B307422D35DFB003F1A99 /* FriendsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B307222D35DFB003F1A99 /* FriendsListTableViewCell.swift */; };
 		0C1B307522D35DFB003F1A99 /* FriendsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B307322D35DFB003F1A99 /* FriendsListTableViewCell.xib */; };
+		0C1B307C22D3A70D003F1A99 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B307B22D3A70D003F1A99 /* Chat.swift */; };
+		0C1B307E22D3A74F003F1A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B307D22D3A74F003F1A99 /* User.swift */; };
+		0C1B308022D3A958003F1A99 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B307F22D3A958003F1A99 /* Message.swift */; };
+		0C1B308522D3BA1A003F1A99 /* ComposeNewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B308322D3BA1A003F1A99 /* ComposeNewChatViewController.swift */; };
+		0C1B308622D3BA1A003F1A99 /* ComposeNewChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B308422D3BA1A003F1A99 /* ComposeNewChatViewController.xib */; };
+		0C1B308A22D3D706003F1A99 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B308822D3D706003F1A99 /* ChatViewController.swift */; };
+		0C1B308B22D3D706003F1A99 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B308922D3D706003F1A99 /* ChatViewController.xib */; };
+		0C1B308E22D3D86F003F1A99 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */; };
+		0C1B308F22D3D86F003F1A99 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */; };
 		0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */; };
 		0C7E0F1122CCBC7C00E275B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0F22CCBC7C00E275B2 /* Main.storyboard */; };
 		0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F1222CCBC7C00E275B2 /* Gossips.xcdatamodeld */; };
@@ -29,6 +38,15 @@
 		0C1B306D22D3505C003F1A99 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		0C1B307222D35DFB003F1A99 /* FriendsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewCell.swift; sourceTree = "<group>"; };
 		0C1B307322D35DFB003F1A99 /* FriendsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListTableViewCell.xib; sourceTree = "<group>"; };
+		0C1B307B22D3A70D003F1A99 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		0C1B307D22D3A74F003F1A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0C1B307F22D3A958003F1A99 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0C1B308322D3BA1A003F1A99 /* ComposeNewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeNewChatViewController.swift; sourceTree = "<group>"; };
+		0C1B308422D3BA1A003F1A99 /* ComposeNewChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComposeNewChatViewController.xib; sourceTree = "<group>"; };
+		0C1B308822D3D706003F1A99 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0C1B308922D3D706003F1A99 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		0C43532A4AC963BA0C12C2B6 /* Pods-Gossips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gossips.release.xcconfig"; path = "Target Support Files/Pods-Gossips/Pods-Gossips.release.xcconfig"; sourceTree = "<group>"; };
 		0C7E0F0822CCBC7C00E275B2 /* Gossips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gossips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +75,9 @@
 		0C1B306622D34B9B003F1A99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C1B307B22D3A70D003F1A99 /* Chat.swift */,
+				0C1B307D22D3A74F003F1A99 /* User.swift */,
+				0C1B307F22D3A958003F1A99 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,8 +85,9 @@
 		0C1B306722D34CA7003F1A99 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				0C1B306822D34CCA003F1A99 /* AuthViewController.swift */,
-				0C1B306922D34CCA003F1A99 /* AuthViewController.xib */,
+				0C1B308722D3D6F2003F1A99 /* Chat */,
+				0C1B308222D3B992003F1A99 /* Compose new chat */,
+				0C1B308122D3B97F003F1A99 /* Authentication */,
 				0C1B307022D35DCB003F1A99 /* Friends list */,
 			);
 			path = Scenes;
@@ -95,6 +117,43 @@
 			children = (
 			);
 			path = "Helper Components";
+			sourceTree = "<group>";
+		};
+		0C1B308122D3B97F003F1A99 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B306822D34CCA003F1A99 /* AuthViewController.swift */,
+				0C1B306922D34CCA003F1A99 /* AuthViewController.xib */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0C1B308222D3B992003F1A99 /* Compose new chat */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B308322D3BA1A003F1A99 /* ComposeNewChatViewController.swift */,
+				0C1B308422D3BA1A003F1A99 /* ComposeNewChatViewController.xib */,
+			);
+			path = "Compose new chat";
+			sourceTree = "<group>";
+		};
+		0C1B308722D3D6F2003F1A99 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B309122D3D88B003F1A99 /* Cells */,
+				0C1B308822D3D706003F1A99 /* ChatViewController.swift */,
+				0C1B308922D3D706003F1A99 /* ChatViewController.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		0C1B309122D3D88B003F1A99 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */,
+				0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		0C7E0EFF22CCBC7C00E275B2 = {
@@ -209,11 +268,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1B308622D3BA1A003F1A99 /* ComposeNewChatViewController.xib in Resources */,
 				0C7E0F1922CCBC7D00E275B2 /* LaunchScreen.storyboard in Resources */,
+				0C1B308B22D3D706003F1A99 /* ChatViewController.xib in Resources */,
 				0CBDFBFA22CCDD5900CC1F4D /* GoogleService-Info.plist in Resources */,
 				0C1B306F22D3505C003F1A99 /* FriendsViewController.xib in Resources */,
 				0C1B307522D35DFB003F1A99 /* FriendsListTableViewCell.xib in Resources */,
 				0C1B306B22D34CCA003F1A99 /* AuthViewController.xib in Resources */,
+				0C1B308F22D3D86F003F1A99 /* ChatTableViewCell.xib in Resources */,
 				0C7E0F1622CCBC7D00E275B2 /* Assets.xcassets in Resources */,
 				0C7E0F1122CCBC7C00E275B2 /* Main.storyboard in Resources */,
 			);
@@ -269,10 +331,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C1B306E22D3505C003F1A99 /* FriendsViewController.swift in Sources */,
+				0C1B307C22D3A70D003F1A99 /* Chat.swift in Sources */,
 				0C1B307422D35DFB003F1A99 /* FriendsListTableViewCell.swift in Sources */,
 				0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */,
 				0C1B306A22D34CCA003F1A99 /* AuthViewController.swift in Sources */,
+				0C1B308E22D3D86F003F1A99 /* ChatTableViewCell.swift in Sources */,
+				0C1B308022D3A958003F1A99 /* Message.swift in Sources */,
 				0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */,
+				0C1B308522D3BA1A003F1A99 /* ComposeNewChatViewController.swift in Sources */,
+				0C1B308A22D3D706003F1A99 /* ChatViewController.swift in Sources */,
+				0C1B307E22D3A74F003F1A99 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

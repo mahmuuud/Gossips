@@ -1,6 +1,6 @@
 //
 //  AuthViewController.swift
-//  FireBase Demo
+//  Gossips
 //
 //  Created by mahmoud mohamed on 7/7/19.
 //  Copyright © 2019 Robusta. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import CodableFirebase
 
 class AuthViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var verifyButton: UIButton!
     var verificationId:String!
     var ref:DatabaseReference!
+    var currentUser:User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class AuthViewController: UIViewController {
     
     func setupNavBar(){
         navigationItem.title = "Enter your Phone"
+        self.navigationController?.navigationBar.backItem?.hidesBackButton = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.barTintColor = .black
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
@@ -61,15 +64,29 @@ class AuthViewController: UIViewController {
         Auth.auth().signIn(with: credential) { (dataResult, error) in
             if error != nil{
                 print("Error: ",error!.localizedDescription)
-                self.ref.child("messages").childByAutoId().setValue("not Authenticated")
                 return
             }
-            self.ref.child("messages").childByAutoId().setValue("Authenticated")
             UserDefaults.standard.set(self.phoneNumberTextField.text!, forKey: "phoneNumber")
+            self.currentUser = User(id:  UUID().uuidString, phoneNumber: self.phoneNumberTextField.text!)
             DispatchQueue.main.async {
                 let friendsListVC = FriendsViewController()
+                friendsListVC.currentUser = self.currentUser
                 self.navigationController?.pushViewController(friendsListVC, animated: true)
+             
             }
+//            var userData=["id":self.currentUser.id]
+//            userData["phoneNumber"] = self.phoneNumberTextField.text!
+//            self.ref.child("users").childByAutoId().setValue(userData)
+            do{
+                print(self.currentUser!)
+                let currentUserJson = try FirebaseEncoder().encode(self.currentUser)
+                self.ref.child("users").childByAutoId().setValue(currentUserJson)
+            }
+
+            catch{
+                print("error encoding user🌑")
+            }
+            
             print("Authenticated 🌕")
         }
     }
@@ -79,10 +96,10 @@ class AuthViewController: UIViewController {
 extension AuthViewController:UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("entered")
-        if string == " " || string == ""{
+        if string == " "{
             return false
         }
-        if textField.text!.count + string.count == 6 {
+        if textField.text!.count + string.count == 6 && string != ""{
             print("Authenticating")
             let verificationCode = textField.text! + string
             authenticate(verificationId: self.verificationId, verificationCode: verificationCode)
