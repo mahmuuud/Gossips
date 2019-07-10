@@ -22,6 +22,7 @@
 		0C1B308B22D3D706003F1A99 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B308922D3D706003F1A99 /* ChatViewController.xib */; };
 		0C1B308E22D3D86F003F1A99 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */; };
 		0C1B308F22D3D86F003F1A99 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */; };
+		0C1B309322D625F5003F1A99 /* ChatScreenViewController+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B309222D625F4003F1A99 /* ChatScreenViewController+helpers.swift */; };
 		0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */; };
 		0C7E0F1122CCBC7C00E275B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7E0F0F22CCBC7C00E275B2 /* Main.storyboard */; };
 		0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E0F1222CCBC7C00E275B2 /* Gossips.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		0C1B308922D3D706003F1A99 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		0C1B309222D625F4003F1A99 /* ChatScreenViewController+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatScreenViewController+helpers.swift"; sourceTree = "<group>"; };
 		0C43532A4AC963BA0C12C2B6 /* Pods-Gossips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gossips.release.xcconfig"; path = "Target Support Files/Pods-Gossips/Pods-Gossips.release.xcconfig"; sourceTree = "<group>"; };
 		0C7E0F0822CCBC7C00E275B2 /* Gossips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gossips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7E0F0B22CCBC7C00E275B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		0C1B307622D36A1E003F1A99 /* Helper Components */ = {
 			isa = PBXGroup;
 			children = (
+				0C1B309222D625F4003F1A99 /* ChatScreenViewController+helpers.swift */,
 			);
 			path = "Helper Components";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */,
 				0C1B306A22D34CCA003F1A99 /* AuthViewController.swift in Sources */,
 				0C1B308E22D3D86F003F1A99 /* ChatTableViewCell.swift in Sources */,
+				0C1B309322D625F5003F1A99 /* ChatScreenViewController+helpers.swift in Sources */,
 				0C1B308022D3A958003F1A99 /* Message.swift in Sources */,
 				0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */,
 				0C1B308522D3BA1A003F1A99 /* ComposeNewChatViewController.swift in Sources */,
