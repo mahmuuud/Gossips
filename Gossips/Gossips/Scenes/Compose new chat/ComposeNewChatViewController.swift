@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 import CodableFirebase
-
+import ContactsUI
 class ComposeNewChatViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var pickContacts: UIButton!
     var ref:DatabaseReference!
     var currentUser:User!
     
@@ -33,7 +34,7 @@ class ComposeNewChatViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = .black
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
-        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 
 
@@ -65,4 +66,39 @@ class ComposeNewChatViewController: UIViewController {
         self.present(alert,animated: true)
     }
     
+    @IBAction func picked(_ sender: Any) {
+        let contactPicker = CNContactPickerViewController()
+        contactPicker.delegate = self
+        contactPicker.displayedPropertyKeys =
+            [CNContactGivenNameKey
+                , CNContactPhoneNumbersKey]
+        self.present(contactPicker, animated: true, completion: nil)
+    }
+    
+}
+extension ComposeNewChatViewController:CNContactPickerDelegate{
+    
+    
+    func contactPicker(_ picker: CNContactPickerViewController,
+                       didSelect contactProperty: CNContactProperty) {
+        
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController,didSelect contact: CNContact) {
+        
+            let userName:String = contact.givenName
+            let userPhoneNumbers:[CNLabeledValue<CNPhoneNumber>] = contact.phoneNumbers
+            let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value
+            let primaryPhoneNumberStr:String = firstPhoneNumber.stringValue
+            print(primaryPhoneNumberStr)
+            
+           phoneNumberTextField.text="+2"+primaryPhoneNumberStr
+        
+     
+        
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        
+    }
 }

@@ -84,6 +84,7 @@ class FriendsViewController: UIViewController {
         self.navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationItem.rightBarButtonItem = newChatBarButton
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     @objc func composeChatButtonTapped(){
@@ -100,7 +101,12 @@ extension FriendsViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: friendCellReuseId,for: indexPath) as! FriendsListTableViewCell
-        cell.profileName.text! = chats[indexPath.row].user1.phoneNumber
+        if (currentUser.phoneNumber == chats[indexPath.row].user1.phoneNumber){
+            cell.profileName.text! = chats[indexPath.row].user2.phoneNumber
+        }else{
+             cell.profileName.text! = chats[indexPath.row].user1.phoneNumber
+        }
+       
         return cell
     }
     

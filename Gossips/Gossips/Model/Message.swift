@@ -8,10 +8,12 @@
 
 import Foundation
 
+
 struct Message:Codable {
     var chatId:String
     var content:String
     var senderId:String
     var recieverId:String
     var timeStamp:TimeInterval
+    var type:String
 }

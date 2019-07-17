@@ -30,6 +30,12 @@
 		0C7E0F1922CCBC7D00E275B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7E0F1722CCBC7D00E275B2 /* LaunchScreen.storyboard */; };
 		0CBDFBFA22CCDD5900CC1F4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CBDFBF922CCDD5900CC1F4D /* GoogleService-Info.plist */; };
 		1A40D303ED9E22C9004AEB92 /* Pods_Gossips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A401D10F68BE3A904D613B2 /* Pods_Gossips.framework */; };
+		771F821522DB532200080914 /* secondChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F821322DB532200080914 /* secondChatTableViewCell.swift */; };
+		771F821622DB532200080914 /* secondChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 771F821422DB532200080914 /* secondChatTableViewCell.xib */; };
+		7767AD3022DDF08A0047038E /* imagesecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767AD2E22DDF08A0047038E /* imagesecondTableViewCell.swift */; };
+		7767AD3122DDF08A0047038E /* imagesecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7767AD2F22DDF08A0047038E /* imagesecondTableViewCell.xib */; };
+		7767AD3422DDF3D30047038E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767AD3222DDF3D30047038E /* ImageTableViewCell.swift */; };
+		7767AD3522DDF3D30047038E /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7767AD3322DDF3D30047038E /* ImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +65,12 @@
 		0C7E0F1A22CCBC7D00E275B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CBDFBF922CCDD5900CC1F4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A401D10F68BE3A904D613B2 /* Pods_Gossips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gossips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		771F821322DB532200080914 /* secondChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondChatTableViewCell.swift; sourceTree = "<group>"; };
+		771F821422DB532200080914 /* secondChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = secondChatTableViewCell.xib; sourceTree = "<group>"; };
+		7767AD2E22DDF08A0047038E /* imagesecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesecondTableViewCell.swift; sourceTree = "<group>"; };
+		7767AD2F22DDF08A0047038E /* imagesecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imagesecondTableViewCell.xib; sourceTree = "<group>"; };
+		7767AD3222DDF3D30047038E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		7767AD3322DDF3D30047038E /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		BD5A276F7E9EBC624404C500 /* Pods-Gossips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gossips.debug.xcconfig"; path = "Target Support Files/Pods-Gossips/Pods-Gossips.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +167,12 @@
 			children = (
 				0C1B308C22D3D86F003F1A99 /* ChatTableViewCell.swift */,
 				0C1B308D22D3D86F003F1A99 /* ChatTableViewCell.xib */,
+				771F821322DB532200080914 /* secondChatTableViewCell.swift */,
+				771F821422DB532200080914 /* secondChatTableViewCell.xib */,
+				7767AD2E22DDF08A0047038E /* imagesecondTableViewCell.swift */,
+				7767AD2F22DDF08A0047038E /* imagesecondTableViewCell.xib */,
+				7767AD3222DDF3D30047038E /* ImageTableViewCell.swift */,
+				7767AD3322DDF3D30047038E /* ImageTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -272,11 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C1B308622D3BA1A003F1A99 /* ComposeNewChatViewController.xib in Resources */,
+				7767AD3522DDF3D30047038E /* ImageTableViewCell.xib in Resources */,
 				0C7E0F1922CCBC7D00E275B2 /* LaunchScreen.storyboard in Resources */,
 				0C1B308B22D3D706003F1A99 /* ChatViewController.xib in Resources */,
 				0CBDFBFA22CCDD5900CC1F4D /* GoogleService-Info.plist in Resources */,
 				0C1B306F22D3505C003F1A99 /* FriendsViewController.xib in Resources */,
 				0C1B307522D35DFB003F1A99 /* FriendsListTableViewCell.xib in Resources */,
+				771F821622DB532200080914 /* secondChatTableViewCell.xib in Resources */,
+				7767AD3122DDF08A0047038E /* imagesecondTableViewCell.xib in Resources */,
 				0C1B306B22D34CCA003F1A99 /* AuthViewController.xib in Resources */,
 				0C1B308F22D3D86F003F1A99 /* ChatTableViewCell.xib in Resources */,
 				0C7E0F1622CCBC7D00E275B2 /* Assets.xcassets in Resources */,
@@ -338,11 +359,14 @@
 				0C1B307422D35DFB003F1A99 /* FriendsListTableViewCell.swift in Sources */,
 				0C7E0F1422CCBC7C00E275B2 /* Gossips.xcdatamodeld in Sources */,
 				0C1B306A22D34CCA003F1A99 /* AuthViewController.swift in Sources */,
+				7767AD3022DDF08A0047038E /* imagesecondTableViewCell.swift in Sources */,
 				0C1B308E22D3D86F003F1A99 /* ChatTableViewCell.swift in Sources */,
 				0C1B309322D625F5003F1A99 /* ChatScreenViewController+helpers.swift in Sources */,
 				0C1B308022D3A958003F1A99 /* Message.swift in Sources */,
 				0C7E0F0C22CCBC7C00E275B2 /* AppDelegate.swift in Sources */,
+				771F821522DB532200080914 /* secondChatTableViewCell.swift in Sources */,
 				0C1B308522D3BA1A003F1A99 /* ComposeNewChatViewController.swift in Sources */,
+				7767AD3422DDF3D30047038E /* ImageTableViewCell.swift in Sources */,
 				0C1B308A22D3D706003F1A99 /* ChatViewController.swift in Sources */,
 				0C1B307E22D3A74F003F1A99 /* User.swift in Sources */,
 			);
@@ -492,7 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNTNZC5RBJ;
+				DEVELOPMENT_TEAM = NJ984G2TD6;
 				INFOPLIST_FILE = Gossips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNTNZC5RBJ;
+				DEVELOPMENT_TEAM = NJ984G2TD6;
 				INFOPLIST_FILE = Gossips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

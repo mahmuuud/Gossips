@@ -12,18 +12,26 @@ import CodableFirebase
 
 class ChatViewController: UIViewController {
     var ref:DatabaseReference!
+    @IBOutlet weak var textView: UITextView!
     var _refHandle:DatabaseHandle!
     var currentUser:User!
+    var imageTobePosted=UIImage()
+    var imageData:Data!
     var currentChat:Chat!
     var messages:[Message] = []
     var sentMessages:[Message] = []
     var recievedMessages:[Message] = []
     var reciever:User!
     var refHandle:DatabaseHandle!
-    
-    
-
-    @IBOutlet weak var messageTextField: UITextField!
+    var sentMessagenib = UINib(nibName: "ChatTableViewCell", bundle: nil)
+    var sentMessagereuse = "ChatTableViewCell"
+    var sentMessagenib2 = UINib(nibName: "secondChatTableViewCell", bundle: nil)
+    var sentMessagereuse2 = "secondChatTableViewCell"
+    var imgSentMessagenib2 = UINib(nibName: "imagesecondTableViewCell", bundle: nil)
+    var imgSentMessagereuse2 = "imagesecondTableViewCell"
+    var imgtablecellnib = UINib(nibName: "ImageTableViewCell", bundle: nil)
+    var imgtablecellreuse = "ImageTableViewCell"
+  
 
     @IBOutlet weak var messagesTableView: UITableView!
     override func viewDidLoad() {
@@ -31,6 +39,15 @@ class ChatViewController: UIViewController {
         ref = Database.database().reference()
         setupNavBar()
         observeMessagesChanges()
+        messagesTableView.register(sentMessagenib, forCellReuseIdentifier: sentMessagereuse)
+          messagesTableView.register(sentMessagenib2, forCellReuseIdentifier: sentMessagereuse2)
+         messagesTableView.register(imgSentMessagenib2, forCellReuseIdentifier: imgSentMessagereuse2)
+             messagesTableView.register(imgtablecellnib, forCellReuseIdentifier: imgtablecellreuse)
+          self.messagesTableView.separatorStyle = .none
+        textView.layer.cornerRadius = 15
+//        let lastIndex = IndexPath(row: self.messages.count - 1, section: 0)
+//        self.messagesTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+//      
     }
     
     func observeMessagesChanges(){
@@ -42,9 +59,9 @@ class ChatViewController: UIViewController {
                 return
             }
             let messageData = snapshot.value!
-            print("messageData: \(messageData)")
+            //print("messageData: \(messageData)")
             let message = try? FirebaseDecoder().decode(Message.self, from: messageData)
-            print("message: \(message)")
+            //print("message: \(message)")
             if message?.chatId == self.currentChat.id{
                 print("found message")
                 self.messages.append(message!)
@@ -57,14 +74,15 @@ class ChatViewController: UIViewController {
 
     
     @IBAction func sendButtonTapped(_ sender: Any) {
-        let message = Message(chatId: self.currentChat.id, content: messageTextField.text!, senderId: self.currentUser.id, recieverId:reciever.id , timeStamp: Date().timeIntervalSinceNow)
+        let message = Message(chatId: self.currentChat.id, content: self.textView.text!, senderId: self.currentUser.id, recieverId:reciever.id , timeStamp: Date().timeIntervalSinceNow,type: "text")
         let messageJson = try? FirebaseEncoder().encode(message)
-        self.messageTextField.text = ""
+        self.textView.text = ""
         print(messageJson!)
         ref.child("messages").childByAutoId().setValue(messageJson)
     }
     
     func setupNavBar(){
+        messagesTableView.estimatedRowHeight = 600
         var user:User
         if self.currentChat.user1.id == currentUser.id{
             user = currentChat.user2
@@ -84,6 +102,16 @@ class ChatViewController: UIViewController {
         self.navigationController?.navigationBar.barStyle = .black
     }
     
+    @IBAction func addPressed(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+            let imag = UIImagePickerController()
+            imag.delegate = self
+            imag.sourceType = UIImagePickerController.SourceType.photoLibrary;
+            imag.allowsEditing = false
+            self.present(imag, animated: true, completion: nil)
+        }
+    }
     
 }
 
@@ -93,14 +121,55 @@ extension ChatViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let messageSnapshot = messages[indexPath.row]
-//        let message = messageSnapshot.value as! [String:String]
-        let cell = UITableViewCell()
-        cell.textLabel?.text = messages[indexPath.row].content
-        return cell
+
+        if (currentUser.id == messages[indexPath.row].recieverId){
+            if(messages[indexPath.row].type=="img"){
+                let cell = (tableView.dequeueReusableCell(withIdentifier: imgtablecellreuse) as? ImageTableViewCell)!
+                let dataOption = NSData(base64Encoded: messages[indexPath.row].content, options: [])
+                let image:UIImage=UIImage(data: dataOption! as Data)!
+                cell.cellImage.image=image
+                return cell
+            }
+            let cell = (tableView.dequeueReusableCell(withIdentifier: sentMessagereuse) as? ChatTableViewCell)!
+             cell.messageLabel?.text = messages[indexPath.row].content
+             return cell
+        }else{
+            if(messages[indexPath.row].type=="img"){
+                let cell = (tableView.dequeueReusableCell(withIdentifier: imgSentMessagereuse2) as? imagesecondTableViewCell)!
+                let dataOption = NSData(base64Encoded: messages[indexPath.row].content, options: [])
+                let image:UIImage=UIImage(data: dataOption! as Data)!
+                cell.cellImage.image=image
+                return cell
+            }
+            let cell = (tableView.dequeueReusableCell(withIdentifier: sentMessagereuse2) as? secondChatTableViewCell)!
+            
+            cell.messageLabel?.text = messages[indexPath.row].content
+            return cell
+        }
+       
+       
         
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     
 }
 
+extension ChatViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let key = UIImagePickerController.InfoKey.originalImage
+        self.imageTobePosted = info[key] as! UIImage
+        let imageData:Data = self.imageTobePosted.pngData()!
+        self.imageData = imageData
+        let str = self.imageData.base64EncodedString()
+        let message = Message(chatId: self.currentChat.id, content: str, senderId: self.currentUser.id, recieverId:reciever.id , timeStamp: Date().timeIntervalSinceNow,type: "img")
+        let messageJson = try? FirebaseEncoder().encode(message)
+        ref.child("messages").childByAutoId().setValue(messageJson)
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+}

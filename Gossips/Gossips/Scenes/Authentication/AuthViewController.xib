@@ -23,20 +23,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+201128822686" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-ZX-SUk">
-                    <rect key="frame" x="50" y="270" width="275" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
-                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-Gw-9Fn">
-                    <rect key="frame" x="50" y="324.5" width="275" height="30"/>
+                    <rect key="frame" x="50" y="284.5" width="275" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7a7-EL-IsH"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                 </textField>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoX-2Z-28r">
-                    <rect key="frame" x="50" y="390.5" width="275" height="35"/>
+                    <rect key="frame" x="50" y="360.5" width="275" height="35"/>
                     <color key="backgroundColor" red="0.9137254901960784" green="0.27058823529411763" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="AY4-Ui-rX0"/>
@@ -51,6 +48,15 @@
                         <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="gmB-Gd-704"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+201007774252" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-ZX-SUk">
+                    <rect key="frame" x="50" y="220" width="275" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="xUs-MJ-pix"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -60,7 +66,7 @@
                 <constraint firstItem="JgP-ZX-SUk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="P09-h8-WJz"/>
                 <constraint firstItem="U0k-Gw-9Fn" firstAttribute="trailing" secondItem="JgP-ZX-SUk" secondAttribute="trailing" id="QZt-2S-qt1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VoX-2Z-28r" secondAttribute="trailing" constant="50" id="dPd-MF-equ"/>
-                <constraint firstItem="JgP-ZX-SUk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="250" id="pJB-jj-lhK"/>
+                <constraint firstItem="JgP-ZX-SUk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="pJB-jj-lhK"/>
                 <constraint firstItem="U0k-Gw-9Fn" firstAttribute="leading" secondItem="JgP-ZX-SUk" secondAttribute="leading" id="pcb-fT-mqw"/>
                 <constraint firstItem="VoX-2Z-28r" firstAttribute="top" secondItem="U0k-Gw-9Fn" secondAttribute="bottom" constant="36" id="qMO-xC-Buu"/>
             </constraints>

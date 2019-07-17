@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="nextButton" destination="u1M-T6-zIK" id="Vqd-nv-RTc"/>
                 <outlet property="phoneNumberTextField" destination="BCw-wW-klV" id="3Pw-Vl-ZOf"/>
+                <outlet property="pickContacts" destination="Cg0-xx-ags" id="CiX-Iw-z47"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +26,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3tV-WP-PMP">
                     <rect key="frame" x="50" y="300.5" width="275" height="86"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+201128822686" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCw-wW-klV">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCw-wW-klV">
                             <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,11 +57,25 @@
                         </button>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cg0-xx-ags">
+                    <rect key="frame" x="50" y="244.5" width="275" height="35"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Pick from contacts">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="picked:" destination="-1" eventType="touchUpInside" id="BHg-A2-ch9"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="3tV-WP-PMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="AVO-ev-Hju"/>
+                <constraint firstItem="Cg0-xx-ags" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Bix-IY-sSe"/>
+                <constraint firstItem="Cg0-xx-ags" firstAttribute="height" secondItem="u1M-T6-zIK" secondAttribute="height" id="Jik-4f-csB"/>
                 <constraint firstItem="3tV-WP-PMP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Jok-yS-EDM"/>
+                <constraint firstItem="3tV-WP-PMP" firstAttribute="top" secondItem="Cg0-xx-ags" secondAttribute="bottom" constant="21" id="bG1-jA-zeL"/>
+                <constraint firstItem="Cg0-xx-ags" firstAttribute="width" secondItem="u1M-T6-zIK" secondAttribute="width" id="cyA-Et-nBM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3tV-WP-PMP" secondAttribute="trailing" constant="50" id="hEj-rp-hMk"/>
                 <constraint firstItem="3tV-WP-PMP" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="kFI-aQ-Zua"/>
             </constraints>

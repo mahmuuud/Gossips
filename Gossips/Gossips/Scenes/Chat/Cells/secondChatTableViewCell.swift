@@ -1,22 +1,22 @@
 //
-//  ChatTableViewCell.swift
+//  secondChatTableViewCell.swift
 //  Gossips
 //
-//  Created by mahmoud mohamed on 7/8/19.
+//  Created by mohamed hisham on 7/14/19.
 //  Copyright © 2019 Robusta. All rights reserved.
 //
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
-
+class secondChatTableViewCell: UITableViewCell {
+    
    
-    @IBOutlet weak var cellImage: UIImageView!
+    
     @IBOutlet weak var messageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-      
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

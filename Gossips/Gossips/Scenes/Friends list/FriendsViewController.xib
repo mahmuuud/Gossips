@@ -31,7 +31,7 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qQw-tA-yit" secondAttribute="bottom" id="1oo-CT-FHl"/>
                 <constraint firstItem="qQw-tA-yit" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5zf-Jp-PrF"/>
@@ -39,6 +39,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qQw-tA-yit" secondAttribute="trailing" id="R8V-nf-6ke"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="122" y="89"/>
         </view>
     </objects>
 </document>

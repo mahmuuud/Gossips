@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="257" id="KGk-i7-Jjw" customClass="imagesecondTableViewCell" customModule="Gossips" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="256.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuR-50-FYh">
+                        <rect key="frame" x="280" y="232" width="30" height="2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="UXB-dP-Qjz"/>
+                            <constraint firstAttribute="height" constant="2" id="ZG2-L6-8iE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddr-yw-JLL">
+                        <rect key="frame" x="280" y="10" width="30" height="2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="JVg-ap-1HU"/>
+                            <constraint firstAttribute="height" constant="2" id="wIq-ib-ojN"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05O-ll-cxu">
+                        <rect key="frame" x="308" y="12" width="2" height="220"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="oNg-HL-75z"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-Po-frd">
+                        <rect key="frame" x="10" y="22" width="288" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="CjF-Bf-iJk"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NuR-50-FYh" secondAttribute="bottom" constant="10" id="4Nv-wC-JZO"/>
+                    <constraint firstAttribute="trailing" secondItem="Ddr-yw-JLL" secondAttribute="trailing" constant="10" id="4Tq-5R-iBY"/>
+                    <constraint firstItem="NuR-50-FYh" firstAttribute="top" secondItem="Uom-Po-frd" secondAttribute="bottom" constant="10" id="58s-tV-bUt"/>
+                    <constraint firstItem="Uom-Po-frd" firstAttribute="top" secondItem="Ddr-yw-JLL" secondAttribute="bottom" constant="10" id="KHH-ck-hFY"/>
+                    <constraint firstItem="Uom-Po-frd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Kuv-2Y-zE9"/>
+                    <constraint firstAttribute="trailing" secondItem="05O-ll-cxu" secondAttribute="trailing" constant="10" id="UKo-pO-mNi"/>
+                    <constraint firstAttribute="trailing" secondItem="NuR-50-FYh" secondAttribute="trailing" constant="10" id="Wst-LQ-XgX"/>
+                    <constraint firstItem="NuR-50-FYh" firstAttribute="top" secondItem="05O-ll-cxu" secondAttribute="bottom" id="g54-Gj-HMu"/>
+                    <constraint firstItem="05O-ll-cxu" firstAttribute="top" secondItem="Ddr-yw-JLL" secondAttribute="bottom" id="mfz-hy-gVT"/>
+                    <constraint firstItem="05O-ll-cxu" firstAttribute="leading" secondItem="Uom-Po-frd" secondAttribute="trailing" constant="10" id="odg-tv-Utp"/>
+                    <constraint firstItem="Ddr-yw-JLL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xQv-qH-xHx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImage" destination="Uom-Po-frd" id="jrE-Dc-nTe"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="142.96875"/>
+        </tableViewCell>
+    </objects>
+</document>
