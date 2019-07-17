@@ -50,6 +50,11 @@ class ChatViewController: UIViewController {
 //      
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavBar()
+    }
+    
     func observeMessagesChanges(){
         let searchRef = ref.child("messages")
         searchRef.observe(.childAdded) { (snapshot) in
