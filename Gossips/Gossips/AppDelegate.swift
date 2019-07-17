@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if UserDefaults.standard.string(forKey: "phoneNumber") != nil{
-            var friendsListVC = FriendsViewController()
+            let friendsListVC = FriendsViewController()
             friendsListVC.isLoggedIn = true
             let navController = UINavigationController(rootViewController: friendsListVC)
             window?.rootViewController = navController

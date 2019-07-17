@@ -61,7 +61,7 @@ class FriendsViewController: UIViewController {
         let phoneNumber = UserDefaults.standard.value(forKey: "phoneNumber")
         let searchRef = ref.child("users").queryOrdered(byChild: "phoneNumber").queryEqual(toValue: phoneNumber!)
         searchRef.observe(.value) { (snapshot) in
-            if snapshot.value == nil{
+            if snapshot.value is NSNull{
                 print("Current user not found")
                 return
             }
