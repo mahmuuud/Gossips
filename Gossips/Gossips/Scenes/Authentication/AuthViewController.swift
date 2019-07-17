@@ -24,6 +24,10 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         configViews()
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKey))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     func configViews(){
@@ -33,7 +37,9 @@ class AuthViewController: UIViewController {
         verifyButton.layer.cornerRadius = 5
         setupNavBar()
     }
-    
+    @objc func dismissKey(){
+        view.endEditing(true)
+    }
     func setupNavBar(){
         navigationItem.title = "Enter your Phone"
         self.navigationController?.navigationBar.backItem?.hidesBackButton = true

@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         application.statusBarStyle = .lightContent
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         return true

@@ -14,6 +14,7 @@ class ChatViewController: UIViewController {
     var ref:DatabaseReference!
     @IBOutlet weak var textView: UITextView!
     var _refHandle:DatabaseHandle!
+    var placeholderLabel : UILabel!
     var currentUser:User!
     var imageTobePosted=UIImage()
     var imageData:Data!
@@ -44,10 +45,26 @@ class ChatViewController: UIViewController {
          messagesTableView.register(imgSentMessagenib2, forCellReuseIdentifier: imgSentMessagereuse2)
              messagesTableView.register(imgtablecellnib, forCellReuseIdentifier: imgtablecellreuse)
           self.messagesTableView.separatorStyle = .none
-        textView.layer.cornerRadius = 15
+        textView.layer.cornerRadius = 3
+        textView.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "Aa"
+        placeholderLabel.font = UIFont.italicSystemFont(ofSize: (textView.font?.pointSize)!)
+        placeholderLabel.sizeToFit()
+        textView.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (textView.font?.pointSize)! / 2)
+        placeholderLabel.textColor = UIColor.lightGray
+        placeholderLabel.isHidden = !textView.text.isEmpty
 //        let lastIndex = IndexPath(row: self.messages.count - 1, section: 0)
 //        self.messagesTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
-//      
+//
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKey))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKey(){
+        view.endEditing(true)
     }
     
     func observeMessagesChanges(){
@@ -172,4 +189,9 @@ extension ChatViewController:UIImagePickerControllerDelegate,UINavigationControl
         picker.dismiss(animated: true, completion: nil)
     }
     
+}
+extension ChatViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
 }
